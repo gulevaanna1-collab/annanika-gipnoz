@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Нейроконсалтинг — Самоценность. Проявленность. Деньги. | Анна Ника Гулева</title>
+<meta name="description" content="Работа с убеждениями, страхами и самооценкой через методы гипнокоучинга. Индивидуальный и групповой форматы. Анна Ника Гулева.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#FAF7F4;--white:#fff;
+  --rose:#A85068;--rose-l:#C4788C;--rose-d:#7C3450;
+  --charcoal:#221830;--charcoal-l:#3A2C4E;
+  --text:#1A1420;--muted:rgba(26,20,32,.62);--border:rgba(168,80,104,.16);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--text);line-height:1.7;font-weight:300;overflow-x:hidden}
+.si{max-width:1120px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;color:var(--charcoal);font-weight:500;line-height:1.15}
+img{max-width:100%;display:block}
+a{color:inherit}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(250,247,244,.85);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-color:var(--border)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;letter-spacing:.5px;color:var(--charcoal)}
+.nav-cta{padding:11px 26px;background:var(--charcoal);color:#fff;border-radius:2px;font-size:13px;font-weight:500;text-decoration:none;letter-spacing:.3px;transition:background .2s}
+.nav-cta:hover{background:var(--rose-d)}
+
+/* HERO */
+.hero{padding:150px 0 90px;overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.hero-title{font-size:52px;margin:20px 0 14px;letter-spacing:.2px}
+.hero-title em{font-style:italic;color:var(--rose)}
+.hero-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--rose-d);margin-bottom:22px}
+.hero-sub{font-size:17px;color:var(--muted);max-width:480px;margin-bottom:36px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{padding:16px 34px;background:var(--rose-d);color:#fff;border:none;border-radius:2px;font-size:14px;font-weight:500;letter-spacing:.3px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
+.btn-primary:hover{background:var(--rose)}
+.btn-ghost{padding:16px 34px;background:transparent;color:var(--charcoal);border:1px solid rgba(34,24,48,.25);border-radius:2px;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;transition:border-color .2s}
+.btn-ghost:hover{border-color:var(--charcoal)}
+.hero-img-wrap{position:relative}
+.hero-img-wrap img{border-radius:4px;width:100%;object-fit:cover;aspect-ratio:1/1}
+.hero-img-wrap::after{content:'';position:absolute;inset:-14px -14px auto auto;width:55%;height:55%;border-top:2px solid var(--rose);border-right:2px solid var(--rose);border-radius:0 4px 0 0;pointer-events:none}
+
+/* PAIN */
+.pain{padding:70px 0;background:var(--charcoal);color:#fff}
+.pain-inner{max-width:780px;margin:0 auto;text-align:center}
+.pain h2{color:#fff;font-size:32px;margin-bottom:24px}
+.pain p{color:rgba(255,255,255,.72);font-size:16px;margin-bottom:16px}
+.pain p:last-child{margin-bottom:0}
+
+/* ABOUT */
+.about{padding:110px 0}
+.about-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+.about-img img{border-radius:4px;width:100%;object-fit:cover;aspect-ratio:4/5}
+.about h2{font-size:34px;margin:14px 0 20px}
+.about p{color:var(--muted);font-size:15.5px;margin-bottom:16px}
+.about-sign{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--rose-d);margin-top:20px}
+
+/* LIST SECTIONS */
+.lists{padding:90px 0;background:var(--white)}
+.lists-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:50px}
+.list-block-title{font-size:26px;margin-bottom:22px}
+.list-block ul{list-style:none}
+.list-block li{display:flex;gap:12px;font-size:15px;color:var(--muted);line-height:1.6;margin-bottom:14px;padding-left:0}
+.list-block li::before{content:'—';color:var(--rose);flex-shrink:0;font-weight:600}
+.section-head{text-align:center;max-width:640px;margin:0 auto}
+.section-head h2{font-size:34px;margin:14px 0 0}
+
+/* HOW IT WORKS */
+.how{padding:100px 0}
+.how-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.how-img img{border-radius:4px;width:100%;object-fit:cover;aspect-ratio:1/1}
+.how-text h2{font-size:32px;margin:14px 0 18px}
+.how-text p{color:var(--muted);font-size:15.5px;margin-bottom:16px}
+
+/* TESTIMONIALS */
+.testimonials{padding:100px 0;background:var(--white)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;margin-top:50px}
+.testimonial-card{}
+.testimonial-video{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:16/9;background:var(--charcoal);box-shadow:0 12px 34px rgba(34,24,48,.12)}
+.testimonial-video iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.testimonial-name{margin-top:16px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--charcoal)}
+.testimonial-name span{color:var(--muted);font-size:14px;font-family:'Inter',sans-serif;font-weight:300}
+
+/* PRICING */
+.pricing{padding:100px 0;background:var(--charcoal)}
+.pricing .eyebrow{color:var(--rose-l)}
+.pricing .section-head h2{color:#fff}
+.pricing-sub{text-align:center;color:rgba(255,255,255,.55);font-size:14px;margin-top:10px;letter-spacing:.3px;text-transform:uppercase}
+.pricing-group{margin-top:56px}
+.pricing-group-label{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:18px;text-align:center}
+.pricing-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pricing-cards.single{grid-template-columns:1fr;max-width:380px;margin:0 auto}
+.price-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:32px 26px;display:flex;flex-direction:column}
+.price-card.featured{border-color:var(--rose);background:rgba(168,80,104,.1)}
+.price-card-badge{font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--rose-l);margin-bottom:10px;font-weight:600}
+.price-card-name{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;margin-bottom:8px}
+.price-card-desc{font-size:13.5px;color:rgba(255,255,255,.55);margin-bottom:20px;flex:1}
+.price-card-amount{font-size:30px;font-weight:500;color:#fff;margin-bottom:18px}
+.price-card-amount span{font-size:13px;color:rgba(255,255,255,.4);font-weight:300}
+.price-card-online{font-size:12px;color:var(--rose-l);letter-spacing:.2px;margin-bottom:16px;display:flex;align-items:center;gap:6px}
+.price-card .btn-primary{text-align:center;width:100%}
+.pricing-guide{margin-top:60px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:32px 36px}
+.pricing-guide-title{color:#fff;font-family:'Cormorant Garamond',serif;font-size:19px;margin-bottom:16px}
+.pricing-guide-item{font-size:14px;color:rgba(255,255,255,.65);margin-bottom:10px}
+.pricing-guide-item b{color:#fff;font-weight:500}
+
+/* SESSION DETAILS */
+.details{padding:100px 0;background:var(--white)}
+.details-photo{width:100%;max-width:820px;margin:50px auto 0;border-radius:4px;overflow:hidden}
+.details-photo img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 20%}
+.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+.detail-card{background:var(--cream);border-radius:4px;padding:30px 32px;border-left:3px solid var(--rose)}
+.detail-card h3{font-size:20px;margin-bottom:10px}
+.detail-card p{font-size:14.5px;color:var(--muted)}
+
+/* DIAGNOSTIC / FORM */
+.diag{padding:100px 0}
+.diag-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.diag-text h2{font-size:34px;margin:14px 0 20px}
+.diag-text>p{color:var(--muted);font-size:15.5px;margin-bottom:22px}
+.diag-text ul{list-style:none}
+.diag-text li{display:flex;gap:12px;font-size:15px;color:var(--muted);margin-bottom:12px}
+.diag-text li::before{content:'✓';color:var(--rose);flex-shrink:0;font-weight:600}
+.form-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:40px}
+.form-card h3{font-size:22px;margin-bottom:6px}
+.form-card-sub{font-size:13.5px;color:var(--muted);margin-bottom:26px}
+.form-row{margin-bottom:16px}
+.form-row label{display:block;font-size:11.5px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.form-row input,.form-row textarea{width:100%;padding:13px 16px;border:1px solid var(--border);border-radius:2px;font-size:14px;font-family:inherit;outline:none;transition:border-color .2s;background:var(--cream)}
+.form-row input:focus,.form-row textarea:focus{border-color:var(--rose)}
+.form-submit{width:100%;padding:15px;background:var(--rose-d);color:#fff;border:none;border-radius:2px;font-size:14px;font-weight:500;cursor:pointer;transition:background .2s;margin-top:6px}
+.form-submit:hover{background:var(--rose)}
+.form-note{font-size:11.5px;color:var(--muted);text-align:center;margin-top:14px}
+.form-success{display:none;text-align:center;padding:30px 10px}
+.form-success.show{display:block}
+.form-success .check{font-size:36px;margin-bottom:12px}
+
+/* FAQ */
+.faq{padding:100px 0;background:var(--white)}
+.faq-list{max-width:760px;margin:50px auto 0}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{padding:22px 4px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:20px}
+.faq-q h3{font-size:17px;font-weight:500;font-family:'Inter',sans-serif;color:var(--charcoal)}
+.faq-arrow{font-size:18px;color:var(--rose);transition:transform .25s;flex-shrink:0}
+.faq-item.open .faq-arrow{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-inner{padding:0 4px 22px;color:var(--muted);font-size:14.5px;line-height:1.7}
+
+/* CLOSING */
+.closing{padding:90px 0;text-align:center}
+.closing-photo{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 32px;border:1px solid var(--border)}
+.closing-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.closing-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:var(--charcoal);max-width:680px;margin:0 auto 20px;line-height:1.5}
+.closing-sign{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--rose-d)}
+
+/* CERTIFICATES */
+.certificates{padding:100px 0;background:var(--white)}
+.certificates-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:50px}
+.certificate-card{display:block;text-decoration:none;border-radius:4px;overflow:hidden;border:1px solid var(--border);background:var(--cream);transition:transform .25s,box-shadow .25s}
+.certificate-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(34,24,48,.15)}
+.certificate-card img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+.certificate-card-name{padding:14px 18px;font-size:13.5px;color:var(--charcoal);line-height:1.5}
+
+/* FINAL CTA */
+.final-cta{padding:90px 0;text-align:center;background:var(--charcoal)}
+.final-cta h2{color:#fff;font-size:38px;margin-bottom:16px}
+.final-cta p{color:rgba(255,255,255,.6);font-size:16px;margin-bottom:30px}
+
+/* DISCLAIMER */
+.disclaimer{padding:0 0 80px}
+.disclaimer-box{max-width:900px;margin:0 auto;background:rgba(168,80,104,.05);border:1px solid var(--border);border-radius:4px;padding:26px 32px}
+.disclaimer-box b{color:var(--charcoal);font-weight:600;font-size:13px;letter-spacing:.3px;text-transform:uppercase;display:block;margin-bottom:8px}
+.disclaimer-box p{font-size:13.5px;color:var(--muted);line-height:1.7}
+
+/* FOOTER */
+footer{background:var(--charcoal);color:rgba(255,255,255,.4);padding:40px 0;text-align:center;font-size:13px}
+footer a{color:rgba(255,255,255,.6);text-decoration:none}
+
+/* reveal anim */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media print{
+  .reveal{opacity:1 !important;transform:none !important}
+  nav{position:static}
+}
+
+@media (max-width:860px){
+  .si{padding:0 20px}
+  .hero{padding:120px 0 60px}
+  .hero-inner,.about-inner,.how-inner,.diag-inner{grid-template-columns:1fr;gap:36px}
+  .hero-img-wrap{order:-1;max-width:340px;margin:0 auto}
+  .hero-title{font-size:36px}
+  .about-img{max-width:320px;margin:0 auto}
+  .lists-grid{grid-template-columns:1fr;gap:36px}
+  .testimonials-grid{grid-template-columns:1fr;max-width:340px;margin:36px auto 0}
+  .pricing-cards{grid-template-columns:1fr}
+  .details-grid{grid-template-columns:1fr}
+  .pain h2,.about h2,.how-text h2,.diag-text h2,.section-head h2{font-size:26px}
+  .form-card{padding:28px 22px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-logo">НЕЙРО<em style="font-style:italic;color:var(--rose)">консалтинг</em></div>
+  <a href="#diagnostic" class="nav-cta">Бесплатная диагностика</a>
+</nav>
+
+<section class="hero">
+  <div class="si hero-inner">
+    <div class="reveal">
+      <div class="eyebrow">Нейроконсалтинг</div>
+      <h1 class="hero-title">Самоценность. <em>Проявленность.</em> Деньги.</h1>
+      <p class="hero-subtitle">Работа с убеждениями, страхами и самооценкой через гипнокоучинг</p>
+      <p class="hero-sub">Вы уже готовы к новому уровню. Но внутри какой-то барьер. Помогаю найти опору там, где раньше было только внутреннее сопротивление.</p>
+      <div class="hero-btns">
+        <a href="#diagnostic" class="btn-primary">Записаться на бесплатную диагностику</a>
+        <a href="#pricing" class="btn-ghost">Форматы и цены</a>
+      </div>
+    </div>
+    <div class="hero-img-wrap reveal">
+      <img src="img/photo-2.jpg" alt="Анна Ника Гулева — нейроконсалтинг, гипнокоучинг">
+    </div>
+  </div>
+</section>
+
+<section class="pain">
+  <div class="si pain-inner reveal">
+    <h2>Вы уже готовы к новому уровню.<br>Но внутри какой-то барьер.</h2>
+    <p>Вы чувствуете, что ваша экспертиза стоит дороже. Вы знаете, что можете больше. Но каждый раз, когда нужно заявить о себе, что-то внутри сжимается.</p>
+    <p>Это не «просто неуверенность». Часто это старые реакции, которые тело и нервная система выучили задолго до того, как вы стали экспертом — и которые не убираются одной мотивационной фразой.</p>
+    <p>Я работаю с этим не через аффирмации и не через «просто поверь в себя». А через методы гипнокоучинга — мягкую работу с состоянием, в котором рождаются новые, более устойчивые реакции на привычные страхи.</p>
+  </div>
+</section>
+
+<section class="about">
+  <div class="si about-inner">
+    <div class="about-img reveal">
+      <img src="img/photo-5.jpg" alt="Анна Ника Гулева">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Кто я</div>
+      <h2>Анна Ника Гулева</h2>
+      <p>Как медиастратег я много лет работаю с людьми в моменты, когда важно говорить о себе ясно и уверенно: в прямом эфире, в интервью, в обучении экспертов. За эти годы я увидела одну и ту же картину десятки раз: человек знает свою ценность головой, но тело всё равно «тормозит» в момент, когда нужно её показать.</p>
+      <p>Это и привело меня к гипнокоучингу — не как к «ещё одной модной методике», а как к инструменту, который работает с состоянием, а не только со словами.</p>
+      <p>Я не обещаю «убрать» травму за один сеанс и не работаю вместо психотерапевта. Моя задача — помочь вам почувствовать больше опоры и меньше внутреннего сопротивления в конкретных ситуациях: перед выступлением, перед тем как назвать цену, перед тем как заявить о себе.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lists">
+  <div class="si">
+    <div class="section-head reveal">
+      <div class="eyebrow">Нейроконсалтинг «Самоценность. Проявленность. Деньги.»</div>
+      <h2>Для кого это и что мы делаем</h2>
+    </div>
+    <div class="lists-grid">
+      <div class="list-block reveal">
+        <div class="list-block-title">Для кого</div>
+        <ul>
+          <li>Эксперты, которые хотят выходить на большие сцены и называть более высокие чеки, но чувствуют внутренний ступор</li>
+          <li>Предприниматели, чей доход давно «упёрся в потолок»</li>
+          <li>Те, кто устал чувствовать себя «невидимым», даже когда есть что сказать</li>
+          <li>Те, кто готов не просто «расти», а разбираться с тем, что мешает расти</li>
+        </ul>
+      </div>
+      <div class="list-block reveal">
+        <div class="list-block-title">Что мы делаем</div>
+        <ul>
+          <li>Снижаем страх проявленности и публичности</li>
+          <li>Работаем с убеждениями, которые держат вас в привычном малом</li>
+          <li>Укрепляем внутреннюю опору и самооценку</li>
+          <li>Помогаем перейти к новому уровню дохода и влияния через работу с состоянием, а не только через стратегию</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="si how-inner">
+    <div class="how-img reveal">
+      <img src="img/photo-3.jpg" alt="Онлайн-сессия гипнокоучинга">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Как это работает</div>
+      <h2>Мягкое погружение в состояние сфокусированного внимания</h2>
+      <p>В основе — методы гипнокоучинга: мягкое погружение в состояние сфокусированного внимания, в котором легче заметить автоматическую реакцию («сжимаюсь», «оправдываюсь», «занижаю цену») и постепенно сформировать новую, более устойчивую.</p>
+      <p>Это не «вскрытие» забытых травм и не обещание найти единственную «причину из детства» за одну сессию — такие обещания красиво звучат, но редко бывают честными. Это последовательная работа с состоянием и повторяющимися паттернами реакции.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="si">
+    <div class="section-head reveal">
+      <div class="eyebrow">Отзывы</div>
+      <h2>Что говорят<br><em>мои клиенты</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-video"><iframe src="https://rutube.ru/play/embed/5a10abab4e1ebb506eece5e20f15d7bc/?p=BGKg_MMwtetoRji00mg1zw" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe></div>
+        <div class="testimonial-name">Иван <span>· Казань</span></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-video"><iframe src="https://rutube.ru/play/embed/3f1059ebddd399b5154a7c69191f46fc/?p=8c-0Igen8ouKzEXuyVmkzQ" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe></div>
+        <div class="testimonial-name">Лика <span>· Санкт-Петербург</span></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-video"><iframe src="https://rutube.ru/play/embed/47d3a4b8f287edcb06ebd6dfb6691a57/?p=WOcf69lOxxC_MdtmZ0hW1A" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe></div>
+        <div class="testimonial-name">Денис <span>· Москва</span></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-video"><iframe src="https://rutube.ru/play/embed/54c2159160d409b8aa0a8afc66888ceb/?p=3gyE2bxhlw16A98Yv-dMfQ" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe></div>
+        <div class="testimonial-name">Анжелика <span>· Новороссийск</span></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-video"><iframe src="https://rutube.ru/play/embed/639772c8244b5e786d2c2c921bf61d80/?p=sjuc-ywJndkwc76IpjA6aQ" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe></div>
+        <div class="testimonial-name">Александр <span>· Германия</span></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-video"><iframe src="https://rutube.ru/play/embed/c6610153c79ec57a0ff5975bdaf303c0/?p=pw8XdqvHof7JyVlNLCAvuw" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe></div>
+        <div class="testimonial-name">Анжела <span>· Германия</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="si">
+    <div class="section-head reveal">
+      <div class="eyebrow">Выберите свой формат</div>
+      <h2>Индивидуальная работа</h2>
+      <div class="pricing-sub">Для тех, кто хочет глубокого погружения и личного внимания</div>
+    </div>
+    <div class="pricing-cards reveal" style="margin-top:50px">
+      <div class="price-card">
+        <div class="price-card-badge">Попробовать</div>
+        <div class="price-card-name">Разовая сессия</div>
+        <div class="price-card-desc">Одна сессия, 1.5–2 часа. Для тех, кто хочет попробовать или проработать один конкретный страх.</div>
+        <div class="price-card-online">🌐 Онлайн — доступно из любой точки мира</div>
+        <div class="price-card-amount">15 000 ₽</div>
+        <a href="#diagnostic" class="btn-primary">Записаться</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-card-badge">Основной формат</div>
+        <div class="price-card-name">4 сессии</div>
+        <div class="price-card-desc">4 недели работы. Системная работа со страхами, убеждениями и самооценкой.</div>
+        <div class="price-card-online">🌐 Онлайн — доступно из любой точки мира</div>
+        <div class="price-card-amount">59 900 ₽</div>
+        <a href="#diagnostic" class="btn-primary">Записаться</a>
+      </div>
+      <div class="price-card">
+        <div class="price-card-badge">Углублённо</div>
+        <div class="price-card-name">5 сессий</div>
+        <div class="price-card-desc">5 недель работы. Для тех, кто хочет пойти глубже и закрепить результат.</div>
+        <div class="price-card-online">🌐 Онлайн — доступно из любой точки мира</div>
+        <div class="price-card-amount">69 900 ₽</div>
+        <a href="#diagnostic" class="btn-primary">Записаться</a>
+      </div>
+    </div>
+
+    <div class="pricing-group reveal">
+      <div class="pricing-group-label">Групповой формат — поддержка группы и эффект «я не одна/не один»</div>
+      <div class="pricing-cards single">
+        <div class="price-card">
+          <div class="price-card-badge">Группа до 6 человек</div>
+          <div class="price-card-name">Группа, 4 сессии</div>
+          <div class="price-card-desc">4 недели работы в мини-группе. Живые онлайн-встречи.</div>
+          <div class="price-card-online">🌐 Онлайн — доступно из любой точки мира</div>
+          <div class="price-card-amount">29 900 ₽</div>
+          <a href="#diagnostic" class="btn-primary">Записаться</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-guide reveal">
+      <div class="pricing-guide-title">Как выбрать формат</div>
+      <div class="pricing-guide-item"><b>Разовая сессия</b> — если не уверены, подходит ли вам такой формат, и хотите попробовать.</div>
+      <div class="pricing-guide-item"><b>4 сессии</b> — если готовы к системной работе и хотите устойчивый результат.</div>
+      <div class="pricing-guide-item"><b>5 сессий</b> — если чувствуете, что нужно больше времени.</div>
+      <div class="pricing-guide-item" style="margin-bottom:0"><b>Группа</b> — если важна поддержка других участников и более бюджетный вариант.</div>
+    </div>
+  </div>
+</section>
+
+<section class="details">
+  <div class="si">
+    <div class="section-head reveal">
+      <div class="eyebrow">Подробнее</div>
+      <h2>Что происходит внутри сессии</h2>
+    </div>
+    <div class="details-photo reveal">
+      <img src="img/photo-6.jpg" alt="Гипносессия онлайн — клиентка в состоянии сфокусированного внимания">
+    </div>
+    <div class="details-grid">
+      <div class="detail-card reveal">
+        <h3>Разовая сессия (1.5–2 часа)</h3>
+        <p>Мы берём один конкретный запрос: страх публичности, ступор перед выступлением, убеждение «я не имею права называть высокую цену». За встречу мы работаем с этим состоянием и даём вам конкретную опору, которую можно использовать уже на следующий день.</p>
+      </div>
+      <div class="detail-card reveal">
+        <h3>4 сессии (системная работа)</h3>
+        <p>Идём глубже: работаем с повторяющимися паттернами, из-за которых вы годами остаётесь в привычном малом. Затрагиваем самооценку, страх проявленности, установки о деньгах. Каждая сессия — шаг к более устойчивому состоянию.</p>
+      </div>
+      <div class="detail-card reveal">
+        <h3>5 сессий (углублённый формат)</h3>
+        <p>Дополнительная сессия для закрепления результата — то, что не успели проработать в основном пакете.</p>
+      </div>
+      <div class="detail-card reveal">
+        <h3>Групповой формат (4 сессии)</h3>
+        <p>Работа в группе до 6 человек. Вы не только работаете со своим запросом, но и видите, как этот процесс проходят другие — это часто снижает ощущение «я одна/один с этим». Встречи раз в неделю, 1.5–2 часа.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="diag" id="diagnostic">
+  <div class="si diag-inner">
+    <div class="reveal">
+      <div class="eyebrow">Бесплатная диагностика</div>
+      <h2>20 минут — без оплаты,<br>без обязательств</h2>
+      <p>Короткий разговор, чтобы понять, действительно ли гипнокоучинг — ваш инструмент.</p>
+      <ul>
+        <li>Разберём ваш текущий запрос</li>
+        <li>Поймём, действительно ли гипнокоучинг — подходящий инструмент именно для вашей ситуации</li>
+        <li>Если нет — честно скажу об этом и, по возможности, порекомендую, куда обратиться</li>
+        <li>Подберём формат, если я пойму, что действительно могу вам помочь</li>
+      </ul>
+    </div>
+    <div class="form-card reveal">
+      <div id="formDefault">
+        <h3>Записаться на диагностику</h3>
+        <div class="form-card-sub">Отвечу лично в течение дня</div>
+        <form id="diagForm">
+          <div class="form-row">
+            <label>Имя</label>
+            <input type="text" name="Имя" required>
+          </div>
+          <div class="form-row">
+            <label>Телефон или Telegram</label>
+            <input type="text" name="Контакт" required>
+          </div>
+          <div class="form-row">
+            <label>Коротко о запросе (необязательно)</label>
+            <textarea name="Комментарий" rows="3"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Записаться на диагностику</button>
+          <div class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</div>
+        </form>
+      </div>
+      <div id="formSuccess" class="form-success">
+        <div class="check">✓</div>
+        <h3>Заявка отправлена</h3>
+        <p style="color:var(--muted);font-size:14px;margin-top:8px">Я свяжусь с вами в течение дня, чтобы договориться о времени диагностики.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="si">
+    <div class="section-head reveal">
+      <div class="eyebrow">Вопросы</div>
+      <h2>Часто задаваемые вопросы</h2>
+    </div>
+    <div class="faq-list reveal" id="faqList">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Что такое гипнокоучинг?</h3><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Это метод работы с состоянием сфокусированного внимания, в котором легче заметить и изменить автоматическую эмоциональную реакцию — например, привычку сжиматься перед тем, как заявить о своей цене. Мы не «внушаем» вам уверенность — мы помогаем нервной системе освоить новую, более устойчивую реакцию.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Это безопасно?</h3><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Да. Вы всегда остаётесь в сознании, полностью контролируете процесс и можете остановить сессию в любой момент. Это не сценический гипноз — только рабочие, коучинговые техники.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Я боюсь, что не «войду в транс».</h3><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Это не сон и не потеря контроля — это состояние сфокусированного внимания, похожее на глубокую сосредоточенность при чтении увлекательной книги. Большинство людей легко попадают в такое состояние. Если с первого раза не получится — используем другие техники.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Сколько длится одна сессия?</h3><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">1.5–2 часа.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Как понять, какой формат мне подходит?</h3><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Начните с бесплатной диагностики — я посмотрю на ваш запрос, и мы вместе решим, что подходит: разовая сессия, системная работа или группа.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Подходит ли мне этот формат, если я в другом городе?</h3><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Да, все сессии проходят онлайн (Zoom / Яндекс Телемост).</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><h3>Я уже пробовала коучинг и психотерапию. Это то же самое?</h3><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Нет. Коучинг работает с целями и действиями. Психотерапия — с клиническими состояниями и часто долгими процессами. Гипнокоучинг — это работа с состоянием и повторяющимися эмоциональными паттернами в конкретных ситуациях, обычно в короткие сроки. Это не замена психотерапии, если у вас клинический запрос.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="si reveal">
+    <div class="closing-photo">
+      <img src="img/photo-1.jpg" alt="Анна Ника Гулева">
+    </div>
+    <div class="closing-quote">«Самооценка не растёт от аффирмаций. Она растёт, когда вы перестаёте автоматически реагировать по старому сценарию. Помочь вам найти эту новую опору — моя работа.»</div>
+    <div class="closing-sign">Анна Ника Гулева</div>
+  </div>
+</section>
+
+<section class="certificates">
+  <div class="si">
+    <div class="section-head reveal">
+      <div class="eyebrow">Квалификация</div>
+      <h2>Сертификаты<br><em>и дипломы</em></h2>
+    </div>
+    <div class="certificates-grid">
+      <a href="img/cert-1.jpg" target="_blank" rel="noopener" class="certificate-card reveal">
+        <img src="img/cert-1.jpg" alt="Erickson Coaching International — Four Quadrant Quantum Thinking">
+        <div class="certificate-card-name">Erickson Coaching International<br>Four Quadrant Quantum Thinking</div>
+      </a>
+      <a href="img/cert-2.jpg" target="_blank" rel="noopener" class="certificate-card reveal">
+        <img src="img/cert-2.jpg" alt="Академия Экспоненциального Коучинга — диплом Михаила Саидова">
+        <div class="certificate-card-name">Академия Экспоненциального Коучинга<br>Coaching Solutions Inc.</div>
+      </a>
+      <a href="img/cert-3.jpg" target="_blank" rel="noopener" class="certificate-card reveal">
+        <img src="img/cert-3.jpg" alt="American Academy of Hypnosis — Certified Master Hypnotherapist">
+        <div class="certificate-card-name">American Academy of Hypnosis<br>Certified Master Hypnotherapist</div>
+      </a>
+      <a href="img/cert-4.jpg" target="_blank" rel="noopener" class="certificate-card reveal">
+        <img src="img/cert-4.jpg" alt="НАДПО — Наведение транса по Д. Элману">
+        <div class="certificate-card-name">НАДПО<br>«Наведение транса по Д. Элману»</div>
+      </a>
+      <a href="img/cert-5.jpg" target="_blank" rel="noopener" class="certificate-card reveal">
+        <img src="img/cert-5.jpg" alt="НАДПО — Терапевтическая метафора в гипнозе">
+        <div class="certificate-card-name">НАДПО<br>«Терапевтическая метафора в гипнозе»</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="si reveal">
+    <h2>Готовы начать?</h2>
+    <p>20 минут — чтобы понять, подходит ли вам этот путь. Без оплаты, без обязательств.</p>
+    <a href="#diagnostic" class="btn-primary">Записаться на бесплатную диагностику</a>
+  </div>
+</section>
+
+<section class="disclaimer">
+  <div class="si">
+    <div class="disclaimer-box reveal">
+      <b>Важно</b>
+      <p>Нейроконсалтинг не заменяет психотерапию и не является медицинской услугой. Если вы сейчас переживаете острое состояние — тяжёлую депрессию, посттравматическое расстройство — пожалуйста, обратитесь к психиатру или клиническому психологу. Я работаю с устойчивыми клиентами над конкретными рабочими и коммуникационными паттернами, а не с клиническими состояниями.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="si">Анна Ника Гулева · Нейроконсалтинг «Самоценность. Проявленность. Деньги.»</div>
+</footer>
+
+<script>
+function toggleFaq(el){
+  var item=el.closest('.faq-item');
+  var wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+  if(!wasOpen)item.classList.add('open');
+}
+
+document.getElementById('diagForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var form=e.target;
+  var data=new FormData(form);
+  data.append('_subject','Заявка — Нейроконсалтинг');
+  var btn=form.querySelector('.form-submit');
+  btn.textContent='Отправляем…';btn.disabled=true;
+  fetch('https://lhdwobpsuithbdxvrwkx.supabase.co/functions/v1/contact',{
+    method:'POST',
+    body:data
+  }).then(function(){
+    document.getElementById('formDefault').style.display='none';
+    document.getElementById('formSuccess').classList.add('show');
+  }).catch(function(){
+    btn.textContent='Записаться на диагностику';btn.disabled=false;
+    alert('Не удалось отправить, попробуйте ещё раз или напишите напрямую.');
+  });
+});
+
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY>10);
+});
+
+var revealEls=document.querySelectorAll('.reveal');
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if(en.isIntersecting) en.target.classList.add('in'); });
+},{threshold:.1});
+revealEls.forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
