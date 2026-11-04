@@ -195,14 +195,15 @@ nav.scrolled{border-color:var(--border)}
 .form-submit{width:100%;padding:15px;background:var(--rose-d);color:#fff;border:none;border-radius:2px;font-size:14px;font-weight:500;cursor:pointer;transition:background .2s;margin-top:6px}
 .form-submit:hover{background:var(--rose)}
 @media (prefers-reduced-motion: no-preference){
-  .form-submit,.hero-booking{
-    background-image:linear-gradient(110deg,var(--rose-d) 35%,var(--rose) 50%,var(--rose-d) 65%);
+  .nav-cta{--booking-base:var(--charcoal);--booking-glint:var(--rose-d)}
+  a[href="#diagnostic"],.form-submit{
+    background-image:linear-gradient(110deg,var(--booking-base,var(--rose-d)) 35%,var(--booking-glint,var(--rose)) 50%,var(--booking-base,var(--rose-d)) 65%);
     background-size:240% 100%;
     animation:booking-shimmer 5s ease-in-out infinite;
   }
-  .form-submit:hover,.form-submit:focus-visible,.hero-booking:hover,.hero-booking:focus-visible{
+  :is(a[href="#diagnostic"],.form-submit):is(:hover,:focus-visible){
     animation:none;
-    background:var(--rose);
+    background-image:none;
   }
 }
 @keyframes booking-shimmer{
@@ -298,7 +299,7 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
       <p class="hero-subtitle">Работа с убеждениями, страхами и самооценкой через гипнокоучинг</p>
       <p class="hero-sub">Вы уже готовы к новому уровню. Но внутри какой-то барьер. Помогаю найти опору там, где раньше было только внутреннее сопротивление.</p>
       <div class="hero-btns">
-        <a href="#diagnostic" class="btn-primary hero-booking">Записаться на бесплатную диагностику</a>
+        <a href="#diagnostic" class="btn-primary">Записаться на бесплатную диагностику</a>
         <a href="#pricing" class="btn-ghost">Форматы и цены</a>
       </div>
     </div>
