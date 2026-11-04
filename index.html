@@ -497,27 +497,9 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
       <div id="formDefault">
         <h3>Записаться на диагностику</h3>
         <div class="form-card-sub">Отвечу лично в течение дня</div>
-        <form id="diagForm">
-          <div class="form-row">
-            <label>Имя</label>
-            <input type="text" name="Имя" required>
-          </div>
-          <div class="form-row">
-            <label>Телефон или Telegram</label>
-            <input type="text" name="Контакт" required>
-          </div>
-          <div class="form-row">
-            <label>Коротко о запросе</label>
-            <textarea name="Комментарий" rows="3"></textarea>
-          </div>
-          <button type="submit" class="form-submit">Записаться на диагностику</button>
-          <div class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</div>
-        </form>
-      </div>
-      <div id="formSuccess" class="form-success">
-        <div class="check">✓</div>
-        <h3>Заявка отправлена</h3>
-        <p style="color:var(--muted);font-size:14px;margin-top:8px">Я свяжусь с вами в течение дня, чтобы договориться о времени диагностики.</p>
+        <iframe src="https://forms.yandex.ru/cloud/6aeb30542c4f89bb10edb4bb/" title="Запись на диагностику" style="width:100%;height:650px;border:0" loading="lazy"></iframe>
+        <p class="form-note"><a href="https://forms.yandex.ru/cloud/6aeb30542c4f89bb10edb4bb/" target="_blank" rel="noopener">Открыть форму в отдельной вкладке</a></p>
+        <p class="form-note"><a href="privacy.html">Политика обработки персональных данных</a> · <a href="consent.html">Согласие на обработку персональных данных</a></p>
       </div>
     </div>
   </div>
@@ -639,25 +621,6 @@ function toggleFaq(el){
   document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
   if(!wasOpen)item.classList.add('open');
 }
-
-document.getElementById('diagForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  var form=e.target;
-  var data=new FormData(form);
-  data.append('_subject','Заявка — Нейроконсалтинг');
-  var btn=form.querySelector('.form-submit');
-  btn.textContent='Отправляем…';btn.disabled=true;
-  fetch('https://lhdwobpsuithbdxvrwkx.supabase.co/functions/v1/contact',{
-    method:'POST',
-    body:data
-  }).then(function(){
-    document.getElementById('formDefault').style.display='none';
-    document.getElementById('formSuccess').classList.add('show');
-  }).catch(function(){
-    btn.textContent='Записаться на диагностику';btn.disabled=false;
-    alert('Не удалось отправить, попробуйте ещё раз или напишите напрямую.');
-  });
-});
 
 window.addEventListener('scroll', function(){
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY>10);
