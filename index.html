@@ -194,6 +194,21 @@ nav.scrolled{border-color:var(--border)}
 .form-row input:focus,.form-row textarea:focus{border-color:var(--rose)}
 .form-submit{width:100%;padding:15px;background:var(--rose-d);color:#fff;border:none;border-radius:2px;font-size:14px;font-weight:500;cursor:pointer;transition:background .2s;margin-top:6px}
 .form-submit:hover{background:var(--rose)}
+@media (prefers-reduced-motion: no-preference){
+  .form-submit{
+    background-image:linear-gradient(110deg,var(--rose-d) 35%,var(--rose) 50%,var(--rose-d) 65%);
+    background-size:240% 100%;
+    animation:booking-shimmer 5s ease-in-out infinite;
+  }
+  .form-submit:hover,.form-submit:focus-visible{
+    animation:none;
+    background:var(--rose);
+  }
+}
+@keyframes booking-shimmer{
+  0%{background-position:100% 50%}
+  55%,100%{background-position:0% 50%}
+}
 .form-note{font-size:11.5px;color:var(--muted);text-align:center;margin-top:14px}
 .form-success{display:none;text-align:center;padding:30px 10px}
 .form-success.show{display:block}
