@@ -300,18 +300,26 @@ nav.scrolled{border-color:var(--border)}
 
 /* FAQ */
 .faq{padding:100px 0;background:var(--white)}
-.faq-list{max-width:760px;margin:50px auto 0}
+.faq-list{max-width:760px;margin:44px auto 0}
 .faq-item{border-bottom:1px solid var(--border)}
-.faq-q{padding:22px 4px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:20px}
-.faq-q h3{font-size:17px;font-weight:500;font-family:'Inter',sans-serif;color:var(--charcoal)}
-.faq-arrow{font-size:18px;color:var(--rose);transition:transform .25s;flex-shrink:0}
-.faq-item.open .faq-arrow{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
-.faq-item.open .faq-a{max-height:300px}
-.faq-item.faq-article.open .faq-a{max-height:none}
-.faq-article p+p,.faq-article h4+p{margin-top:12px}
-.faq-article h4{margin-top:20px;color:var(--charcoal)}
-.faq-a-inner{padding:0 4px 22px;color:var(--muted);font-size:14.5px;line-height:1.7}
+.faq-item summary{display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;list-style:none;padding:20px 4px;font-size:16px;font-weight:600;color:var(--charcoal)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:20px;color:var(--rose-d);flex-shrink:0}
+.faq-item[open] summary::after{content:'−'}
+.faq-a-inner{padding:0 30px 22px 4px;color:var(--muted);font-size:14.5px;line-height:1.7}
+
+/* BLOG */
+.blog{padding:100px 0;background:var(--cream)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:44px}
+.blog-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--border);border-radius:6px;background:var(--white);text-decoration:none;transition:box-shadow .2s,border-color .2s}
+.blog-card:hover,.blog-card:focus-visible{border-color:var(--rose);box-shadow:0 8px 28px rgba(34,24,48,.09)}
+.blog-card img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 35%}
+.blog-card-body{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:24px}
+.blog-card h3{font-size:26px;line-height:1.15;margin:0 0 12px}
+.blog-card p{font-size:14px;color:var(--muted);margin:0 0 18px}
+.blog-card-link{margin-top:auto;color:var(--rose-d);font-weight:700;font-size:13px}
+@media(max-width:860px){.blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.blog,.faq{padding:72px 0}}
+@media(max-width:580px){.blog-grid{grid-template-columns:1fr;gap:18px;margin-top:30px}.blog,.faq{padding:56px 0}.faq-list{margin-top:24px}}
 
 /* CLOSING */
 .closing{padding:90px 0;text-align:center}
@@ -629,96 +637,84 @@ section strong{font-weight:700;color:var(--text)}
   </div>
 </section>
 
-<section class="faq">
+<section class="faq" id="faq" aria-labelledby="faq-heading">
   <div class="si">
-    <div class="section-head reveal">
+    <div class="section-head">
       <div class="eyebrow">Вопросы</div>
-      <h2>Часто задаваемые вопросы</h2>
+      <h2 id="faq-heading">Часто задаваемые вопросы</h2>
     </div>
-    <div class="faq-list reveal" id="faqList">
-      <div class="faq-item faq-article">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Чем предпринимателю может помочь гипноз?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner"><p><a href="/blog/gipnoz-dlya-predprinimatelya/">Открыть статью на отдельной странице</a></p>
-          <p>Вы знаете, сколько стоит ваша работа. Но стоит клиенту спросить о цене, и <strong>вы предлагаете скидку раньше, чем он успевает ответить</strong>. Или соглашаетесь выступить, а потом ищете повод отказаться. Или записываете видео, пересматриваете его и решаете, что выложите когда-нибудь потом.</p>
-          <p>За годы работы в медиа я много раз видела, как люди с сильной экспертизой теряются именно в тот момент, когда нужно показать, на что они способны. Эти ситуации могут выглядеть совершенно по-разному, но за ними порой стоит один и тот же привычный способ реагировать: <strong>обесценить себя, уступить, остаться в тени</strong>.</p>
-          <h4>Что происходит на сессии гипнокоучинга</h4>
-          <p>Разговор о цене, страх камеры или отказ от выступления — это отправная точка. Я ввожу вас в состояние гипноза, и мы исследуем, <strong>где мог сформироваться этот паттерн и почему он до сих пор включается</strong>. Например, за привычкой уступать в цене может стоять убеждение, что право хорошо зарабатывать нужно каждый раз заново заслуживать.</p>
-          <p><strong>С этим паттерном мы и работаем в сессии.</strong> Уже к её концу вы можете почувствовать себя иначе: спокойнее думать о разговоре, которого избегали, или заметить, что привычная мысль «кто я такая, чтобы об этом говорить?» больше не звучит так убедительно.</p>
-          <h4>Как изменения входят в жизнь</h4>
-          <p><strong>Новое состояние постепенно становится заметно в обычных рабочих ситуациях.</strong> На переговорах вы называете цену и даёте клиенту ответить. Когда вас приглашают в эфир, вы сначала думаете о том, что хотите сказать зрителям. А оценивая свою работу, опираетесь на её реальную ценность.</p>
-          <p>Цель этой работы — чтобы в таких ситуациях <strong>старый сценарий постепенно перестал определять ваши решения</strong>. Со временем это может отразиться и на том, какой гонорар вы готовы обсуждать, какие проекты выбираете и насколько свободно чувствуете себя на публике.</p>
-          <p>Если вы узнали себя, приходите на <strong>бесплатную 20-минутную диагностику</strong>. Обсудим, какой сценарий повторяется у вас, и поймём, подходит ли гипнокоучинг для вашего запроса.</p>
-          <p><a href="#diagnostic" class="btn-primary">Записаться на бесплатную диагностику</a></p>
-          <p><strong>Анна Ника Гулева</strong> — гипнокоуч, медиапродюсер экспертов и предпринимателей.</p>
-        </div></div>
-      </div>
-      <div class="faq-item faq-article">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Что такое гипноз и что происходит во время сеанса?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner"><p><a href="/blog/chto-takoe-gipnoz/">Открыть статью на отдельной странице</a></p>
-          <p>«Я буду слышать ваш голос? Смогу остановиться, если захочу?» С этих вопросов часто хочется начать знакомство с гипнозом. И ответ на оба — да. Во время сеанса человек обычно слышит специалиста, понимает, что происходит, и <strong>может прервать процесс</strong>.</p>
-          <h4>Что такое гипноз простыми словами</h4>
-          <p>Подразделение Американской психологической ассоциации, которое изучает гипноз, описывает его как <strong>состояние сосредоточенного внимания</strong>. Внешние отвлекающие сигналы в этот момент отходят на второй план, а человек становится восприимчивее к словесным подсказкам. Например, специалист может предложить представить знакомое место и обратить внимание на то, что меняется в ощущениях. Восприимчивость к таким подсказкам у людей различается.</p>
-          <h4>Как проходит сеанс</h4>
-          <p>Сначала специалист и клиент <strong>обсуждают запрос и договариваются о ходе работы</strong>. Затем голос специалиста помогает направить внимание на дыхание, телесные ощущения или мысленный образ. Дальше содержание сеанса зависит от цели встречи. В конце специалист помогает постепенно переключить внимание обратно на то, что происходит вокруг.</p>
-          <h4>Как я использую гипноз в гипнокоучинге</h4>
-          <p>Ко мне можно прийти, если <strong>в разных рабочих ситуациях вы замечаете одну и ту же реакцию</strong>. Например, вы предлагаете скидку раньше, чем клиент успел ответить, откладываете выход в эфир или отказываетесь от выступления, хотя вам есть что сказать, саботируете переговоры по выгодному контракту, сопротивляетесь действиям, которые ведут вас к деньгам.</p>
-          <p>Я ввожу вас в состояние гипноза, и мы исследуем, <strong>где могла сформироваться эта привычная реакция и что поддерживает её сегодня</strong>. Допустим, вы привыкли обесценивать свой вклад каждый раз, когда нужно назвать цену. На сессии мы работаем именно с этой реакцией. Если в процессе возникает образ или всплывает воспоминание, мы обращаем внимание на то, что оно значит для вас сейчас.</p>
-          <p><strong>После сессии изменения могут проявляться постепенно.</strong> Например, вы замечаете, что обсуждаете гонорар без привычных оправданий или перед камерой больше думаете о том, что хотите сказать, чем о том, как вас оценят, а важный звонок или действие перестает вызывать сопротивление.</p>
-          <p>Если вам знаком такой повторяющийся сценарий, приходите на <strong>бесплатную 20-минутную диагностику</strong>. Обсудим ваш запрос и посмотрим, подходит ли вам этот формат работы.</p>
-          <p><a href="#diagnostic" class="btn-primary">Записаться на бесплатную диагностику</a></p>
-          <p><strong>Анна Ника Гулева</strong> — гипнокоуч, медиапродюсер экспертов и предпринимателей.</p>
-        </div></div>
-      </div>
-      <div class="faq-item faq-article">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>А что, если я не гипнабелен?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner"><p><a href="/blog/a-esli-ya-ne-gipnabelen/">Открыть статью на отдельной странице</a></p>
-          <p>«Я всё слышу, у меня в голове по-прежнему мысли. Кажется, на меня гипноз не действует». Если вы ожидаете, что в какой-то момент всё вокруг исчезнет и вы перестанете замечать происходящее, легко решить, что сеанс идёт как-то неправильно. Но <strong>способность слышать мой голос и замечать свои мысли вполне совместима с гипнозом</strong>. Во время сеанса внимание становится более сосредоточенным, а возможность прервать процесс остаётся у вас.</p>
-          <h4>Что значит «быть гипнабельным»?</h4>
-          <p><strong>Гипнабельность — это восприимчивость к гипнотическим внушениям.</strong> Она различается у разных людей. Более того, один и тот же человек может откликаться на разные предложения по-разному. Например, ему легко представить знакомое место, а предложение почувствовать тяжесть в руке почти ничего не меняет в ощущениях. Поэтому по одной подсказке или одному необычному ощущению трудно судить о восприимчивости в целом.</p>
-          <h4>Что делать, если на сеансе я ничего особенного не чувствую?</h4>
-          <p>Скажите мне об этом прямо. Например: «Я слышу вас, но мне трудно представить то, о чём вы говорите» или «Я всё время ловлю себя на мысли, что делаю что-то неправильно». По вашему отклику я <strong>могу изменить темп, предложить другой способ сосредоточиться или сделать паузу</strong>.</p>
-          <p>В моей практике гипноз — один из способов исследовать привычную реакцию. Допустим, перед каждым эфиром появляется мысль «Мне нечего сказать», хотя вы хорошо знаете тему. На сессии мы можем посмотреть, <strong>с чем связано это обесценивание и почему оно возникает именно тогда, когда нужно стать заметнее</strong>. Если такой формат вам не подходит, это тоже можно обсудить прямо во время встречи.</p>
-          <p>Если вас останавливает вопрос «А вдруг я не гипнабелен?», приходите на <strong>бесплатную 20-минутную диагностику</strong>. Обсудим ваш запрос, я расскажу, как проходит первая сессия, а вы решите, хотите ли попробовать.</p>
-          <p><a href="#diagnostic" class="btn-primary">Записаться на бесплатную диагностику</a></p>
-          <p><strong>Анна Ника Гулева</strong> — гипнокоуч, медиапродюсер экспертов и предпринимателей.</p>
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Что такое гипнокоучинг?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Это метод работы с состоянием сфокусированного внимания, в котором легче <strong>заметить и изменить автоматическую эмоциональную реакцию</strong> — например, привычку сжиматься перед тем, как заявить о своей цене. Мы не «внушаем» вам уверенность — мы помогаем нервной системе освоить новую, более устойчивую реакцию.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Это безопасно?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Да. Вы всегда остаётесь в сознании, полностью контролируете процесс и <strong>можете остановить сессию в любой момент</strong>. Это не сценический гипноз — только рабочие, коучинговые техники.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Я боюсь, что не «войду в транс».</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Это не сон и не потеря контроля — это <strong>состояние сфокусированного внимания</strong>, похожее на глубокую сосредоточенность при чтении увлекательной книги. Большинство людей легко попадают в такое состояние. Если с первого раза не получится — используем другие техники.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Сколько длится одна сессия?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">1.5–2 часа.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Как понять, какой формат мне подходит?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner"><strong>Начните с бесплатной диагностики</strong> — я посмотрю на ваш запрос, и мы вместе решим, что подходит: разовая сессия, системная работа или группа.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Подходит ли мне этот формат, если я в другом городе?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Да, <strong>все сессии проходят онлайн</strong> (Zoom / Яндекс Телемост).</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Я уже пробовала коучинг и психотерапию. Это то же самое?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Нет. Коучинг работает с целями и действиями. Психотерапия — с клиническими состояниями и часто долгими процессами. Гипнокоучинг — это <strong>работа с состоянием и повторяющимися эмоциональными паттернами</strong> в конкретных ситуациях, обычно в короткие сроки. Это не замена психотерапии, если у вас клинический запрос.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Что такое гипнокоучинг и чем он помогает?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Гипнокоучинг — это <strong>работа с подсознанием с помощью гипноза</strong>: мы находим автоматическую реакцию, которая мешает вам (страх, зажим, старое убеждение о деньгах или о себе), и меняем её на более устойчивую. В отличие от классического коучинга, который работает с целями и действиями «сверху», гипнокоучинг идёт через состояние и подсознательные паттерны.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)"><h3>Как побороть страх публичных выступлений с помощью гипноза?</h3><span class="faq-arrow">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Страх публичных выступлений чаще всего — это <strong>автоматическая телесная реакция</strong>, закреплённая подсознанием, а не рациональный страх. Через гипнокоучинг мы находим момент, где этот сценарий закрепился, и меняем реакцию нервной системы на более устойчивую — без внушений, в полном сознании и под вашим контролем. Это работает так же для страха камеры, сцены или важного разговора о деньгах.</div></div>
-      </div>
+    <div class="faq-list">
+      <details class="faq-item" name="hypnocoaching-faq">
+        <summary>Что такое гипнокоучинг?</summary>
+        <div class="faq-a-inner">Это метод работы с состоянием сфокусированного внимания, в котором легче <strong>заметить и изменить автоматическую эмоциональную реакцию</strong> — например, привычку сжиматься перед тем, как заявить о своей цене. Мы не «внушаем» вам уверенность — мы помогаем нервной системе освоить новую, более устойчивую реакцию.</div>
+      </details>
+      <details class="faq-item" name="hypnocoaching-faq">
+        <summary>Это безопасно?</summary>
+        <div class="faq-a-inner">Да. Вы всегда остаётесь в сознании, полностью контролируете процесс и <strong>можете остановить сессию в любой момент</strong>. Это не сценический гипноз — только рабочие, коучинговые техники.</div>
+      </details>
+      <details class="faq-item" name="hypnocoaching-faq">
+        <summary>Я боюсь, что не «войду в транс».</summary>
+        <div class="faq-a-inner">Это не сон и не потеря контроля — это <strong>состояние сфокусированного внимания</strong>, похожее на глубокую сосредоточенность при чтении увлекательной книги. Большинство людей легко попадают в такое состояние. Если с первого раза не получится — используем другие техники.</div>
+      </details>
+      <details class="faq-item" name="hypnocoaching-faq">
+        <summary>Сколько длится одна сессия?</summary>
+        <div class="faq-a-inner">1.5–2 часа.</div>
+      </details>
+      <details class="faq-item" name="hypnocoaching-faq">
+        <summary>Как понять, какой формат мне подходит?</summary>
+        <div class="faq-a-inner"><strong>Начните с бесплатной диагностики</strong> — я посмотрю на ваш запрос, и мы вместе решим, что подходит: разовая сессия, системная работа или группа.</div>
+      </details>
+      <details class="faq-item" name="hypnocoaching-faq">
+        <summary>Подходит ли мне этот формат, если я в другом городе?</summary>
+        <div class="faq-a-inner">Да, <strong>все сессии проходят онлайн</strong> (Zoom / Яндекс Телемост).</div>
+      </details>
+      <details class="faq-item" name="hypnocoaching-faq">
+        <summary>Я уже пробовала коучинг и психотерапию. Это то же самое?</summary>
+        <div class="faq-a-inner">Нет. Коучинг работает с целями и действиями. Психотерапия — с клиническими состояниями и часто долгими процессами. Гипнокоучинг — это <strong>работа с состоянием и повторяющимися эмоциональными паттернами</strong> в конкретных ситуациях, обычно в короткие сроки. Это не замена психотерапии, если у вас клинический запрос.</div>
+      </details>
+      <details class="faq-item" name="hypnocoaching-faq">
+        <summary>Что такое гипнокоучинг и чем он помогает?</summary>
+        <div class="faq-a-inner">Гипнокоучинг — это <strong>работа с подсознанием с помощью гипноза</strong>: мы находим автоматическую реакцию, которая мешает вам (страх, зажим, старое убеждение о деньгах или о себе), и меняем её на более устойчивую. В отличие от классического коучинга, который работает с целями и действиями «сверху», гипнокоучинг идёт через состояние и подсознательные паттерны.</div>
+      </details>
+      <details class="faq-item" name="hypnocoaching-faq">
+        <summary>Как побороть страх публичных выступлений с помощью гипноза?</summary>
+        <div class="faq-a-inner">Страх публичных выступлений чаще всего — это <strong>автоматическая телесная реакция</strong>, закреплённая подсознанием, а не рациональный страх. Через гипнокоучинг мы находим момент, где этот сценарий закрепился, и меняем реакцию нервной системы на более устойчивую — без внушений, в полном сознании и под вашим контролем. Это работает так же для страха камеры, сцены или важного разговора о деньгах.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="blog" id="blog" aria-labelledby="blog-heading">
+  <div class="si">
+    <div class="section-head">
+      <div class="eyebrow">Блог</div>
+      <h2 id="blog-heading">Больше о гипнозе и гипнокоучинге</h2>
+    </div>
+    <div class="blog-grid">
+      <a class="blog-card" href="/blog/gipnoz-dlya-predprinimatelya/">
+        <img src="/img/photo-5.jpg" alt="" loading="lazy" decoding="async">
+        <div class="blog-card-body">
+          <h3>Чем предпринимателю может помочь гипноз?</h3>
+          <p>Почему бывает трудно назвать свою цену, выйти в эфир или принять выгодное предложение. Как гипнокоучинг работает с повторяющейся реакцией.</p>
+          <span class="blog-card-link" aria-hidden="true">Читать статью →</span>
+        </div>
+      </a>
+      <a class="blog-card" href="/blog/chto-takoe-gipnoz/">
+        <img src="/img/photo-2.jpg" alt="" loading="lazy" decoding="async">
+        <div class="blog-card-body">
+          <h3>Что такое гипноз и что происходит во время сеанса?</h3>
+          <p>Что происходит с вниманием во время гипноза, как устроена сессия и можно ли её остановить.</p>
+          <span class="blog-card-link" aria-hidden="true">Читать статью →</span>
+        </div>
+      </a>
+      <a class="blog-card" href="/blog/a-esli-ya-ne-gipnabelen/">
+        <img src="/img/photo-1.jpg" alt="" loading="lazy" decoding="async">
+        <div class="blog-card-body">
+          <h3>А что, если я не гипнабелен?</h3>
+          <p>Почему можно слышать голос специалиста и замечать свои мысли во время гипноза. Что делать, если вы не чувствуете ничего особенного.</p>
+          <span class="blog-card-link" aria-hidden="true">Читать статью →</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -786,13 +782,6 @@ section strong{font-weight:700;color:var(--text)}
 </footer>
 
 <script>
-function toggleFaq(el){
-  var item=el.closest('.faq-item');
-  var wasOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
-  if(!wasOpen)item.classList.add('open');
-}
-
 window.addEventListener('scroll', function(){
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY>10);
 });
