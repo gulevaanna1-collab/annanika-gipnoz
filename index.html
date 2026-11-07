@@ -266,7 +266,10 @@ nav.scrolled{border-color:var(--border)}
 .diag .form-card{border-top:3px solid var(--rose-d);box-shadow:0 14px 40px rgba(34,24,48,.08)}
 .diag .form-card .eyebrow{font-size:10px;letter-spacing:1.6px}
 .diag .form-card-sub{margin-bottom:12px}
+.diagnostic-form-window{overflow:hidden;overflow:clip}
 .diagnostic-form-frame{display:block;width:100%;height:560px;border:0}
+/* The embed script sets the full iframe height, including its service footer. */
+.diagnostic-form-window .diagnostic-form-frame[style*="height"]{margin-bottom:-100px}
 .form-card-sub{font-size:13.5px;color:var(--muted);margin-bottom:26px}
 .form-row{margin-bottom:16px}
 .form-row label{display:block;font-size:11.5px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
@@ -613,7 +616,9 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
         <div class="eyebrow">Бесплатная онлайн-встреча · 20 минут</div>
         <h3>Записаться на диагностику</h3>
         <p class="form-card-sub">Оставьте имя и удобный контакт. Я отвечу лично, чтобы договориться о времени.</p>
-        <iframe class="diagnostic-form-frame" src="https://forms.yandex.ru/cloud/6aeb30542c4f89bb10edb4bb?iframe=1" name="ya-form-6aeb30542c4f89bb10edb4bb" title="Анкета для записи на диагностику" loading="lazy"></iframe>
+        <div class="diagnostic-form-window">
+          <iframe class="diagnostic-form-frame" src="https://forms.yandex.ru/cloud/6aeb30542c4f89bb10edb4bb?iframe=1" name="ya-form-6aeb30542c4f89bb10edb4bb" title="Анкета для записи на диагностику" loading="lazy"></iframe>
+        </div>
         <noscript><p class="form-note"><a href="https://forms.yandex.ru/cloud/6aeb30542c4f89bb10edb4bb/">Открыть анкету</a></p></noscript>
       </div>
     </div>
